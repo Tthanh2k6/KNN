@@ -8,7 +8,7 @@
     +Bước 1: 
         Làm mịn dữ liệu (Smoothing): Sử dụng các hàm Spline để làm mượt đường cong nếu dữ liệu có nhiều nhiễu.
     +Bước 2:
-        Chuẩn hóa (Normalization): Đưa cả trục $x$ (số lượng cụm) và trục $y$ (giá trị WCSS) về khoảng $[0, 1]$.
+        Chuẩn hóa (Normalization): Đưa cả trục $x$ (số lượng cụm) và trục $y$ (giá trị WCSS) về khoảng [0, 1].
     +Bước 3:
         Xoay đường cong (Rotation): Tính toán đường thẳng nối điểm đầu và điểm cuối của đồ thị. Sau đó, xoay hệ tọa độ sao cho đường thẳng này nằm ngang trên trục hoành.
     +Bước 4:
