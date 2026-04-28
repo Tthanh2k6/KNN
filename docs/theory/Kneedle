@@ -1,0 +1,15 @@
+-Thông thường, khi chạy K-means, chúng ta sử dụng chỉ số WCSS (Within-Cluster Sum of Squares - Tổng bình phương khoảng cách trong cụm). Khi tăng K, WCSS sẽ giảm dần.
+-Vấn đề: 
+    Nếu chọn K quá nhỏ, các cụm bị gộp cưỡng ép. Nếu chọn K quá lớn (bằng số lượng điểm dữ liệu), WCSS sẽ bằng 0 nhưng mô hình bị quá khớp (overfitting).
+-Giải pháp: 
+    Tìm điểm "Elbow" nơi mà tốc độ giảm của WCSS bắt đầu chậm lại đáng kể. 
+    Kneedle chính là thuật toán để toán học hóa việc tìm điểm này thay vì nhìn bằng mắt thường.
+-Thuật toán Kneedle hoạt động theo các bước sau:
+    +Bước 1: 
+        Làm mịn dữ liệu (Smoothing): Sử dụng các hàm Spline để làm mượt đường cong nếu dữ liệu có nhiều nhiễu.
+    +Bước 2:
+        Chuẩn hóa (Normalization): Đưa cả trục $x$ (số lượng cụm) và trục $y$ (giá trị WCSS) về khoảng $[0, 1]$.
+    +Bước 3:
+        Xoay đường cong (Rotation): Tính toán đường thẳng nối điểm đầu và điểm cuối của đồ thị. Sau đó, xoay hệ tọa độ sao cho đường thẳng này nằm ngang trên trục hoành.
+    +Bước 4:
+        Tìm điểm cực đại: Điểm trên đường cong chuẩn hóa có khoảng cách xa nhất so với đường thẳng nối đầu-cuối chính là Knee point (điểm đầu gối).
