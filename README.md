@@ -11,7 +11,7 @@ Dự án được phân công cụ thể cho 9 đầu việc, thực hiện bở
 | 1 | **Trần Trung Thành** | [@Tthanh2k6](https://github.com/Tthanh2k6) | Code K-Means, kiểm tra biến động Elbow & Quản lý source code |
 | 2 | **Trương Minh Trí** | [@EmmTee666](https://github.com/EmmTee666) | Giải thích "điểm gãy" & nghiên cứu thuật toán Kneedle |
 | 3 | **Nguyễn Đăng Khoa** | [@dangkhoa126](https://github.com/dangkhoa126) | Phân tích các trường hợp Elbow mờ & đề xuất giải pháp |
-| 4 | **Nguyễn Hoang Huy** | [@HoangHuy-DNS](https://github.com/HoangHuy-DNS) | Vẽ đồ thị Elbow & trực quan hóa kết quả phân cụm |
+| 4 | **Nguyễn Hoàng Huy** | [@HoangHuy-DNS](https://github.com/HoangHuy-DNS) | Vẽ đồ thị Elbow & trực quan hóa kết quả phân cụm |
 | 5 | **Nguyễn Thái Thuận** | [@nguyenthaithuan2408](https://github.com/nguyenthaithuan2408) | Tạo dữ liệu giả lập (Blobs/Moons) kiểm tra độ nhạy Elbow |
 | 6 | **Trương Gia Thuận** | [@p1n9v](https://github.com/p1n9v) | Nghiên cứu lý thuyết & ý nghĩa hình học của WCSS |
 | 7 | **Thân Nguyễn Dương Tuấn**| *(Chưa có)* | Thu thập data (Mall Customers, Iris), EDA & Tiền xử lý |
