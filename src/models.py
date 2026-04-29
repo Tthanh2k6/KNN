@@ -29,3 +29,38 @@ def run_kmeans_multiple_times(X, k_range, n_runs=5, init_method='k-means++'):
         all_wcss.append(wcss_run)
         
     return np.array(all_wcss)
+
+import pandas as pd
+from sklearn.cluster import KMeans
+ 
+ 
+def tinh_wcss(X, ten_dataset="Dataset"):
+    """
+    Chạy vòng lặp K=1→10, tính WCSS cho từng K.
+ 
+    Tham số:
+        X            : numpy array — dữ liệu đã StandardScaler (từ TV4)
+        ten_dataset  : string      — tên dataset để in ra màn hình
+ 
+    Trả về:
+        wcss : list gồm 10 giá trị WCSS tương ứng K=1..10
+    """
+    print(f"\n{'='*45}")
+    print(f"  {ten_dataset}")
+    print(f"{'='*45}")
+ 
+    wcss = []
+ 
+    for k in range(1, 11):
+        kmeans = KMeans(
+            n_clusters  = k,
+            init        = 'k-means++',
+            n_init      = 10,
+            max_iter    = 300,
+            random_state= 42
+        )
+        kmeans.fit(X)
+        wcss.append(kmeans.inertia_)   # inertia_ = WCSS
+        print(f"  K = {k:2d}  →  WCSS = {kmeans.inertia_:.4f}")
+ 
+    return wcss
