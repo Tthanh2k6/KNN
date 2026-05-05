@@ -14,7 +14,7 @@ Dự án được phân công cụ thể cho 9 đầu việc, thực hiện bở
 | 4 | **Nguyễn Hoàng Huy** | [@HoangHuy-DNS](https://github.com/HoangHuy-DNS) | Vẽ đồ thị Elbow & trực quan hóa kết quả phân cụm |
 | 5 | **Nguyễn Thái Thuận** | [@nguyenthaithuan2408](https://github.com/nguyenthaithuan2408) | Tạo dữ liệu giả lập (Blobs/Moons) kiểm tra độ nhạy Elbow |
 | 6 | **Trương Gia Thuận** | [@p1n9v](https://github.com/p1n9v) | Nghiên cứu lý thuyết & ý nghĩa hình học của WCSS |
-| 7 | **Thân Nguyễn Dương Tuấn**| *(Chưa có)* | Thu thập data (Mall Customers, Iris), EDA & Tiền xử lý |
+| 7 | **Thân Nguyễn Dương Tuấn**| [@dtunabcd](https://github.com/dtunabcd) | Thu thập data (Mall Customers, Iris), EDA & Tiền xử lý |
 | 8 | **Nguyễn Viết Anh Khôi** | *(Chưa có)* | Nghiên cứu & lập trình đối chiếu Silhouette Score |
 | 9 | **Anh Khôi** | [@browseK](https://github.com/browseK) | Lập trình vòng lặp tính WCSS & Chuẩn bị Q&A |
 
