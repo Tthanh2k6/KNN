@@ -32,7 +32,7 @@ Dự án được phân công cụ thể cho 9 đầu việc, thực hiện bở
 - `src/`: Mã nguồn Python xử lý thuật toán.
 - `data/`: Các tập dữ liệu mẫu dùng cho bài thuyết trình (CSV, Excel).
 - `NoteBook/`: Chứa file `.ipynb` trình bày chi tiết quá trình chạy code, vẽ biểu đồ và giải thích kết quả.
-- `docs/`: Tài liệu thuyết trình và file Word mô tả chi tiết 20 chủ đề.
+- `docs/`: Tài liệu thuyết trình và file Word báo cáo chi tiết chủ đề.
 - `Test/`: Các đoạn mã kiểm tra tính đúng đắn của thuật toán.
 
 ## 🛠 Yêu cầu hệ thống
