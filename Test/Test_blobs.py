@@ -14,9 +14,6 @@ if project_dir not in sys.path:
     sys.path.append(project_dir)
 
 from src.models import run_kmeans_multiple_times
-import src.utils
-# Inject numpy vào src.utils để tránh NameError mà không cần sửa file src/utils.py
-src.utils.np = np
 from src.utils import aggregate_wcss, find_knee_kneedle
 from src.visualization import plot_elbow, plot_kmeans_subplots
 

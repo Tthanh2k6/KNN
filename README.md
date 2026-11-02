@@ -3,13 +3,13 @@
 Course group project (Artificial Intelligence, Topic 2). The repository is named `KNN`, but the work is about **K-Means clustering**, not k-nearest neighbours.
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Tthanh2k6/Portfolio/main/public/IMG/project-knn.png" alt="K-Means WCSS Elbow Optimization, Silhouette Score & 2D PCA Clusters" width="100%" />
+  <img src="https://raw.githubusercontent.com/Tthanh2k6/Portfolio/main/public/IMG/project-knn.png" alt="K-Means WCSS Elbow method and Silhouette Score" width="100%" />
 
   <br />
 
   <p align="center">
     <img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-    <img src="https://img.shields.io/badge/scikit--learn-KMeans_%26_PCA-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
+    <img src="https://img.shields.io/badge/scikit--learn-KMeans-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
     <img src="https://img.shields.io/badge/Jupyter-Notebooks-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter" />
     <img src="https://img.shields.io/badge/Matplotlib_%26_Seaborn-Visualization-11557C?style=flat-square" alt="Matplotlib" />
   </p>
@@ -19,13 +19,13 @@ Course group project (Artificial Intelligence, Topic 2). The repository is named
 
 ## Overview
 
-An empirical study and implementation of **K-Means Clustering** and **choosing the number of clusters `k`** using the **Within-Cluster Sum of Squares (WCSS) Elbow Method**, **Kneedle knee-point detection**, **Silhouette Coefficient analysis**, and **2D PCA cluster projection** on real-world (Mall_Customers, Iris) and synthetic (make_blobs, make_moons) datasets.
+A study of **K-Means clustering** and of **choosing the number of clusters `k`** with the **Within-Cluster Sum of Squares (WCSS) Elbow Method**, **Kneedle knee-point detection** and the **Silhouette Coefficient**, on public datasets (Mall_Customers, Iris) and synthetic ones (make_blobs, make_moons).
 
 ### What the notebooks do
 1. **Data Standardization & EDA:** Feature scaling (StandardScaler) and exploratory distribution analysis across income and spending-score dimensions.
-2. **WCSS Inertia & Kneedle Inflection Detection:** Sweeps `k` from 1 to 10, computes WCSS inertia, and pinpoints the mathematical elbow (`k = 4`, WCSS = 73.6, Silhouette = 0.684).
-3. **Ambiguous Elbow Mitigation:** Cross-validates ambiguous WCSS curves against **Silhouette Scores** and non-convex cluster geometries (make_moons).
-4. **2D PCA Cluster Visualization:** Projects multi-dimensional customer segments onto principal components (PC1, PC2) with plotted centroids.
+2. **WCSS Elbow & Kneedle:** Sweeps `k` from 1 to 10 and computes WCSS. On the scaled Iris data the notebook picks `k = 3` (WCSS 600.0 → 229.7 → 153.0, then a slower decline); the Mall Customers WCSS values for `k = 1..10` are printed in `02_elbow_method_analysis.ipynb`. `src/utils.py` implements Kneedle to pick the knee automatically.
+3. **Ambiguous elbows:** Compares the WCSS curve with **Silhouette Scores** (`03_silhouette_vs_elbow.ipynb`, Mall Customers, `k = 2..10`) and tests non-convex clusters (make_moons) in `Test/Test_blobs.py`.
+4. **Cluster plots:** Scatter plots of the clusters for several values of `k` (`src/visualization.py`).
 
 ---
 
@@ -49,6 +49,6 @@ An empirical study and implementation of **K-Means Clustering** and **choosing t
 
 - src/ — Python clustering and evaluation modules
 - NoteBook/ — Interactive Jupyter Notebooks (.ipynb) with step-by-step derivations and plots
-- data/ — Benchmark datasets (CSV, Excel)
+- data/ — Datasets (CSV): original files in `data/Gốc/`, scaled versions in `data/Đã xử lí/`
 - Test/ — Verification scripts
-- docs/ — Presentation slides and technical report
+- docs/ — Group report and theory notes (Word documents)

@@ -1,3 +1,6 @@
+import numpy as np
+
+
 def aggregate_wcss(all_wcss, method='mean'):
     """
     Tổng hợp ma trận WCSS (n_runs x len(k_range)) thành một vector đại diện.
